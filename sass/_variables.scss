@@ -1,0 +1,16 @@
+// COLORS
+$clr-black: #{"hsl(0,0%,8%)"};
+
+$clr-grey: #{"hsl(0,0%,85%)"};
+$clr-dark-grey: #{"hsl(0,0%,14%)"};
+
+$clr-error: #{"hsl(7,100%,68%)"};
+$clr-green: #{"hsl(153,71%,59%)"};
+$clr-white: #{"hsl(0,0%,100%)"};
+
+// FONTS
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+}
