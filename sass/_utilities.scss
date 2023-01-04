@@ -1,3 +1,18 @@
+// UTILITIES
+
 .center-text {
   text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.sm-y-padding {
+  // padding: 0 1.6rem 0.1rem 2.4rem;
+  padding-bottom: 0.1rem !important;
 }

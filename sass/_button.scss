@@ -17,16 +17,26 @@
     font-family: inherit;
 
     /* Put transition on the original "state" */
-    transition: all 0.3s;
+    @include transition;
   }
 
   &--green:link,
   &--green:visited {
-    color: $clr-white;
-    border-bottom: 2px solid $clr-green;
+    @include btn-link;
   }
+
   &--green:hover,
   &--green:active {
-    color: $clr-green;
+    @include btn-hover;
+  }
+
+  &--form {
+    @include btn-link;
+    background-color: transparent;
+  }
+
+  &--form:hover,
+  &--form:active {
+    @include btn-hover;
   }
 }

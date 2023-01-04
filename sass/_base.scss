@@ -12,15 +12,16 @@ html {
 
 body {
   min-height: 100vh;
+}
+
+.body-wrapper {
   background-color: $clr-black;
+  background-image: url(/assets/images/pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 84vw 67.5vw;
 
   display: grid;
-  grid-template-columns:
-    [full-start] minmax(1.6rem, 1fr) [center-start] repeat(
-      12,
-      [col-start] minmax(min-content, 9.25rem) [col-end]
-    )
-    [center-end] minmax(1.6rem, 1fr) [full-end];
+  @include grid;
 
   // column-gap: 3rem;
 
@@ -29,9 +30,9 @@ body {
 }
 
 .main {
-  grid-column: center-start / center-end;
-
+  @include center-start;
   display: grid;
   grid-template-rows: min-content;
   row-gap: 8rem;
+  padding-bottom: 8rem;
 }

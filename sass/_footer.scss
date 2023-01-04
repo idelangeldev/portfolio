@@ -1,0 +1,124 @@
+.footer {
+  grid-column: full-start / full-end;
+  background-color: $clr-dark-grey;
+  padding: 6rem 0;
+
+  display: grid;
+  @include grid;
+  row-gap: 8.7rem;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    // z-index: -1;
+    content: url(../assets/images/pattern-rings.svg);
+    bottom: 27rem;
+    right: 50vw;
+    z-index: 0;
+  }
+
+  &__logo-box {
+    @include center-start;
+    border-top: 1px solid $clr-white;
+    padding-top: 3.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+  }
+
+  &__logo:link,
+  &__logo:visited {
+    color: $clr-white;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 3.2rem;
+    letter-spacing: -0.033rem;
+    @include transition;
+  }
+
+  &__logo:hover,
+  &__logo:active {
+    color: $clr-green;
+  }
+
+  &__social-box {
+    display: flex;
+    align-items: center;
+    gap: 2.467rem;
+  }
+
+  &__social-link {
+    text-decoration: none;
+  }
+  &__social-svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__social-logo {
+    // height: 1.92rem;
+    @include transition;
+  }
+
+  &__social-link:hover .footer__social-svg .footer__social-logo,
+  &__social-link:active .footer__social-svg .footer__social-logo {
+    fill: $clr-green;
+  }
+}
+
+.form {
+  @include center-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5rem;
+  overflow-x: hidden;
+
+  &__input {
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: 500;
+    text-transform: uppercase;
+    // line-height: 2.6;
+
+    color: $clr-white;
+    padding: 0.7rem 1.6rem 1.4rem 2.4rem;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $clr-white;
+    width: 100%;
+    display: block;
+    @include transition;
+
+    &:focus {
+      outline: none;
+      // box-shadow: 0 1rem 2rem rgba($color-black, .1);
+      // border-bottom: 3px solid $color-primary;
+    }
+
+    &::placeholder {
+      color: $clr-white-lowop;
+      letter-spacing: -0.22px;
+    }
+  }
+
+  &__label {
+    color: $clr-white-lowop;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.6rem;
+    letter-spacing: 0.1rem;
+    display: block;
+    @include transition;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4.4rem);
+  }
+}

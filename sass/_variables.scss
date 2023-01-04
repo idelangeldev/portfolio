@@ -7,10 +7,40 @@ $clr-dark-grey: #{"hsl(0,0%,14%)"};
 $clr-error: #{"hsl(7,100%,68%)"};
 $clr-green: #{"hsl(153,71%,59%)"};
 $clr-white: #{"hsl(0,0%,100%)"};
+$clr-white-lowop: #{"hsla(0,0%,100%, .5)"};
 
 // FONTS
 @font-face {
   font-family: "SpaceGrotesk";
   src: url("../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
     format("truetype");
+}
+
+// MIXINS
+
+@mixin grid {
+  grid-template-columns:
+    [full-start] minmax(1.6rem, 1fr) [center-start] repeat(
+      12,
+      [col-start] minmax(min-content, 9.25rem) [col-end]
+    )
+    [center-end] minmax(1.6rem, 1fr) [full-end];
+}
+
+@mixin center-start {
+  grid-column: center-start / center-end;
+}
+
+@mixin btn-link {
+  color: $clr-white;
+  border-bottom: 2px solid $clr-green;
+}
+
+@mixin btn-hover {
+  color: $clr-green;
+}
+
+@mixin transition {
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
 }

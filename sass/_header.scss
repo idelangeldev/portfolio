@@ -1,5 +1,5 @@
 .header {
-  grid-column: center-start / center-end;
+  @include center-start;
   display: flex;
   flex-direction: column;
   height: 9.2rem;
@@ -10,6 +10,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 
   &__logo {
     color: $clr-white;
@@ -23,10 +24,24 @@
   &__social-box {
     display: flex;
     align-items: center;
-    gap: 2.56rem;
+    gap: 2.467rem;
+  }
+
+  &__social-link {
+    text-decoration: none;
+  }
+  &__social-svg {
+    width: 2rem;
+    height: 2rem;
   }
 
   &__social-logo {
-    height: 1.92rem;
+    // height: 1.92rem;
+    @include transition;
+  }
+
+  &__social-link:hover .header__social-svg .header__social-logo,
+  &__social-link:active .header__social-svg .header__social-logo {
+    fill: $clr-green;
   }
 }
