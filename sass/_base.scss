@@ -27,6 +27,10 @@ body {
 
   position: relative;
   overflow-x: hidden;
+
+  @media only screen and (min-width: $bp-tab) {
+    background-image: none;
+  }
 }
 
 .main {
@@ -35,4 +39,16 @@ body {
   grid-template-rows: min-content;
   row-gap: 8rem;
   padding-bottom: 8rem;
+
+  @media only screen and (min-width: $bp-ipad-pro) {
+    row-gap: 9.032rem;
+    padding-bottom: 13.9rem;
+  }
+
+  @media only screen and (min-width: $bp-mb-pro) {
+    row-gap: 9.244rem;
+  }
+  @media only screen and (min-width: $bp-bigger-laptop) {
+    row-gap: 10.4rem;
+  }
 }

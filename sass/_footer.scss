@@ -8,13 +8,43 @@
   row-gap: 8.7rem;
   position: relative;
 
+  @media only screen and (min-width: $bp-ipad-pro) {
+    padding: 8.4rem 0;
+    row-gap: 9.2rem;
+  }
+
   &::before {
     position: absolute;
     // z-index: -1;
     content: url(../assets/images/pattern-rings.svg);
-    bottom: 27rem;
+    bottom: 25.5rem;
     right: 50vw;
     z-index: 0;
+
+    @media only screen and (min-width: $bp-tab) {
+      bottom: 15.7rem;
+      right: 77.5vw;
+    }
+    @media only screen and (min-width: $bp-ipad-pro) {
+      bottom: 21.9rem;
+      right: 81.5vw;
+    }
+    @media only screen and (min-width: $bp-mb-pro) {
+      bottom: 19.9rem;
+      right: 80.7vw;
+    }
+    @media only screen and (min-width: $bp-bigger-laptop) {
+      right: 77.43vw;
+    }
+    @media only screen and (min-width: $bp-higher-res) {
+      right: 73.5vw;
+    }
+    @media only screen and (min-width: $bp-full-hd) {
+      right: 70vw;
+    }
+    @media only screen and (min-width: $bp-4k) {
+      right: 65.25vw;
+    }
   }
 
   &__logo-box {
@@ -26,6 +56,11 @@
     align-items: center;
     justify-content: end;
     gap: 2rem;
+
+    @media only screen and (min-width: $bp-tab) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__logo:link,
@@ -37,6 +72,11 @@
     line-height: 3.2rem;
     letter-spacing: -0.033rem;
     @include transition;
+
+    @media only screen and (min-width: $bp-tab) {
+      font-size: 3.2rem;
+      letter-spacing: -0.044rem;
+    }
   }
 
   &__logo:hover,
@@ -52,10 +92,17 @@
 
   &__social-link {
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
   &__social-svg {
     width: 2rem;
     height: 2rem;
+
+    @media only screen and (min-width: $bp-tab) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 
   &__social-logo {
@@ -76,6 +123,26 @@
   row-gap: 5rem;
   overflow-x: hidden;
 
+  @media only screen and (min-width: $bp-tab) {
+    width: 60.49%;
+    transform: translateX(33%);
+  }
+  @media only screen and (min-width: $bp-ipad-pro) {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    transform: translateX(0);
+    gap: 11rem;
+  }
+  @media only screen and (min-width: $bp-mb-pro) {
+    gap: 22rem;
+  }
+
+  &__heading-box {
+    @media only screen and (min-width: $bp-ipad-pro) {
+      text-align: left;
+    }
+  }
+
   &__input {
     font-size: 1.6rem;
     font-family: inherit;
@@ -92,6 +159,10 @@
     width: 100%;
     display: block;
     @include transition;
+
+    @media only screen and (min-width: $bp-ipad-pro) {
+      width: 90.5%;
+    }
 
     &:focus {
       outline: none;

@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
 
     <title>Frontend Mentor | Single-page developer portfolio</title>
   </head>
@@ -87,15 +88,28 @@
       <main class="main">
         <section class="section-hero center-text">
           <picture class="hero__pic">
+            <source
+              srcset="/assets/images/image-profile-mobile.webp"
+              media="(max-width:
+            42em)"
+            />
+            <source
+              srcset="/assets/images/image-profile-tablet.webp"
+              media="(max-width:
+            56em)"
+            />
+
             <img
-              src="/assets/images/image-profile-mobile.webp"
+              srcset="/assets/images/image-profile-desktop.webp"
               alt="Adam Keyes"
+              src="/assets/images/image-profile-desktop.webp"
               class="hero__img"
             />
           </picture>
           <div class="hero__text-box">
             <h1 class="heading-primary">
-              Nice to meet you! I'm <span class="underline">Adam Keyes</span>.
+              Nice to <span class="nbsp">&nbsp;</span> meet you! I'm
+              <span class="underline">Adam Keyes</span>.
             </h1>
             <p class="hero__text">
               Based in the UK, I'm a front-end developer passionate about
@@ -153,6 +167,10 @@
                   src="/assets/images/thumbnail-project-1-large.webp"
                   class="projects__img"
                 />
+                <div class="projects__overlay">
+                  <a href="#" class="btn btn--green">View project</a>
+                  <a href="#" class="btn btn--green">View code</a>
+                </div>
               </picture>
               <div class="projects__project-title">
                 <h3 class="heading-tertiary">Design portfolio</h3>
@@ -181,6 +199,10 @@
                   src="/assets/images/thumbnail-project-2-large.webp"
                   class="projects__img"
                 />
+                <div class="projects__overlay">
+                  <a href="#" class="btn btn--green">View project</a>
+                  <a href="#" class="btn btn--green">View code</a>
+                </div>
               </picture>
               <div class="projects__project-title">
                 <h3 class="heading-tertiary">E-learning landing page</h3>
@@ -209,6 +231,10 @@
                   src="/assets/images/thumbnail-project-3-large.webp"
                   class="projects__img"
                 />
+                <div class="projects__overlay">
+                  <a href="#" class="btn btn--green">View project</a>
+                  <a href="#" class="btn btn--green">View code</a>
+                </div>
               </picture>
               <div class="projects__project-title">
                 <h3 class="heading-tertiary">Todo web app</h3>
@@ -238,6 +264,10 @@
                   src="/assets/images/thumbnail-project-4-large.webp"
                   class="projects__img"
                 />
+                <div class="projects__overlay">
+                  <a href="#" class="btn btn--green">View project</a>
+                  <a href="#" class="btn btn--green">View code</a>
+                </div>
               </picture>
               <div class="projects__project-title">
                 <h3 class="heading-tertiary">Entertainment web app</h3>
@@ -267,6 +297,10 @@
                   src="/assets/images/thumbnail-project-5-large.webp"
                   class="projects__img"
                 />
+                <div class="projects__overlay">
+                  <a href="#" class="btn btn--green">View project</a>
+                  <a href="#" class="btn btn--green">View code</a>
+                </div>
               </picture>
               <div class="projects__project-title">
                 <h3 class="heading-tertiary">Memory game</h3>
@@ -296,6 +330,10 @@
                   src="/assets/images/thumbnail-project-6-large.webp"
                   class="projects__img"
                 />
+                <div class="projects__overlay">
+                  <a href="#" class="btn btn--green">View project</a>
+                  <a href="#" class="btn btn--green">View code</a>
+                </div>
               </picture>
               <div class="projects__project-title">
                 <h3 class="heading-tertiary">Art gallery showcase</h3>

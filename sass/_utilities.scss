@@ -16,3 +16,26 @@
   // padding: 0 1.6rem 0.1rem 2.4rem;
   padding-bottom: 0.1rem !important;
 }
+
+.nbsp {
+  display: none;
+  @media only screen and (min-width: $bp-tab) {
+    display: inline-block;
+  }
+  @media only screen and (min-width: $bp-tabb) {
+    display: none;
+  }
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.valid {
+  border-bottom: 1px solid $clr-green !important;
+}
+
+.error {
+  border-bottom: 1px solid $clr-error !important;
+}
