@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/singlepage-developer-portfolio-VzVMWhcaBG](https://www.frontendmentor.io/solutions/singlepage-developer-portfolio-VzVMWhcaBG)
 - Live Site URL: [https://portfolio-ida.netlify.app/](https://portfolio-ida.netlify.app/)
 
 ## My process
