@@ -3,9 +3,9 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 
-const inPut = document.querySelectorAll(".form__input");
-const label = document.querySelectorAll(".form__label");
-console.log(form, nameInput, emailInput, messageInput, label);
+const errorMessage = "Sorry, invalid format here";
+
+console.log(form, nameInput, emailInput, messageInput);
 
 function showError(input, message) {
   const formGroup = input.parentElement;
@@ -25,6 +25,22 @@ function isValidEmail(email) {
   return re.test(email);
 }
 
+// Check required fields
+function checkRequired(inputArr) {
+  inputArr.forEach(function (input) {
+    if (input.value.trim() === "") {
+      showError(input, `${getFieldName(input)} is required`);
+    } else {
+      showSuccess(input);
+    }
+  });
+}
+
+// Get fieldname
+function getFieldName(input) {
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
 // EVENT LISTENERS
 
 // Add an event listener to the input field to listen for changes
@@ -34,8 +50,8 @@ nameInput.addEventListener("input", function () {
 
   // Check if the input is a valid name
   if (!/^[a-zA-Z ]+$/.test(name)) {
-    // If not, display an error message
-    showError(nameInput, "Sorry, invalid format here");
+    // If not, display an error message ("Sorry, invalid format here")
+    showError(nameInput, errorMessage);
   } else {
     // If the input is valid, clear the error message
     showSuccess(nameInput);
@@ -49,19 +65,29 @@ emailInput.addEventListener("input", function () {
 
   // Validate the email
   if (!isValidEmail(email)) {
-    showError(emailInput, "Sorry, invalid format here");
+    // If not, display an error message ("Sorry, invalid format here")
+    showError(emailInput, errorMessage);
   } else {
     showSuccess(emailInput);
   }
 });
 
-/*
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  if (nameInput.value === "") {
-    showError(nameInput, "Name is required");
+// Add an event listener to the message area input
+messageInput.addEventListener("input", function () {
+  // Get the email value
+  const message = messageInput.value;
+
+  // Validate the email
+  if (message === "") {
+    showError(messageInput, `${getFieldName(messageInput)} is required`);
   } else {
-    showSuccess(nameInput);
+    showSuccess(messageInput);
   }
 });
-*/
+
+// // FORM
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+
+//   checkRequired([nameInput, emailInput, messageInput]);
+// });

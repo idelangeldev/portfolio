@@ -73,6 +73,9 @@ body {
   opacity: 0;
   visibility: hidden; }
 
+.d-none {
+  display: none; }
+
 body {
   color: hsl(0,0%,85%);
   font-family: "SpaceGrotesk", sans-serif;

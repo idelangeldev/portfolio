@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="Israel del Angel (@mexwebdev21)" />
+
+    <meta name="theme-color" content="#151515" />
+
     <link
       rel="icon"
       type="image/png"
@@ -353,7 +357,16 @@
       </main>
 
       <footer class="footer">
-        <form action="POST" class="form" id="form">
+        <form
+          class="form"
+          id="form"
+          name="Portfolio Contact Form"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit="submit"
+        >
+          <input class="d-none" name="bot-field" />
           <div class="form__heading-box center-text">
             <p class="form__heading">Contact</p>
             <p class="form__text">
@@ -370,6 +383,7 @@
                 class="form__input"
                 placeholder="NAME"
                 id="name"
+                required
               />
               <label for="name" class="form__label">NAME</label>
               <small class="form__small">Error message</small>
@@ -380,6 +394,7 @@
                 class="form__input"
                 placeholder="EMAIL"
                 id="email"
+                required
               />
               <label for="email" class="form__label">EMAIL</label>
               <small class="form__small">Error message</small>
@@ -391,6 +406,7 @@
                 rows="4"
                 class="form__input"
                 placeholder="MESSAGE"
+                required
               ></textarea>
               <label for="message" class="form__label">MESSAGE</label>
               <small class="form__small">Error message</small>
