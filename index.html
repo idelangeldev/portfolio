@@ -353,7 +353,7 @@
       </main>
 
       <footer class="footer">
-        <form action="POST" class="form">
+        <form action="POST" class="form" id="form">
           <div class="form__heading-box center-text">
             <p class="form__heading">Contact</p>
             <p class="form__text">
@@ -372,6 +372,7 @@
                 id="name"
               />
               <label for="name" class="form__label">NAME</label>
+              <small class="form__small">Error message</small>
             </div>
             <div class="form__group">
               <input
@@ -381,6 +382,7 @@
                 id="email"
               />
               <label for="email" class="form__label">EMAIL</label>
+              <small class="form__small">Error message</small>
             </div>
             <div class="form__group">
               <textarea
@@ -391,9 +393,10 @@
                 placeholder="MESSAGE"
               ></textarea>
               <label for="message" class="form__label">MESSAGE</label>
+              <small class="form__small">Error message</small>
             </div>
             <div class="form__group right-text">
-              <button class="btn btn--form">Send message</button>
+              <button type="submit" class="btn btn--form">Send message</button>
             </div>
           </div>
           <!-- adamkeyes -->
