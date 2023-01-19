@@ -17,16 +17,6 @@
   padding-bottom: 0.1rem !important;
 }
 
-.nbsp {
-  display: none;
-  @media only screen and (min-width: $bp-tab) {
-    display: inline-block;
-  }
-  @media only screen and (min-width: $bp-tabb) {
-    display: none;
-  }
-}
-
 .invisible {
   opacity: 0;
   visibility: hidden;

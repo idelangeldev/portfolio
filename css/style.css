@@ -60,15 +60,6 @@ body {
 .sm-y-padding {
   padding-bottom: 0.1rem !important; }
 
-.nbsp {
-  display: none; }
-  @media only screen and (min-width: 42em) {
-    .nbsp {
-      display: inline-block; } }
-  @media only screen and (min-width: 48.5em) {
-    .nbsp {
-      display: none; } }
-
 .invisible {
   opacity: 0;
   visibility: hidden; }
@@ -155,8 +146,10 @@ body {
   line-height: 3.2rem;
   text-transform: uppercase; }
 
-.underline {
-  border-bottom: 4px solid hsl(153,71%,59%); }
+.underline, .underline:link, .underline:active {
+  border-bottom: 4px solid hsl(153,71%,59%);
+  color: currentColor;
+  text-decoration: none; }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;

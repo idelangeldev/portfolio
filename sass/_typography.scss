@@ -85,5 +85,11 @@ body {
 }
 
 .underline {
-  border-bottom: 4px solid $clr-green;
+  &,
+  &:link,
+  &:active {
+    border-bottom: 4px solid $clr-green;
+    color: currentColor;
+    text-decoration: none;
+  }
 }
