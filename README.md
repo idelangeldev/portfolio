@@ -98,3 +98,5 @@ Eventually, I'll write the code on this page using React.
 ## Acknowledgments
 
 Shoutout to Brad Traversy - [@bradtraversy]. His teaching helped a lot with the form validation section.
+
+An even bigger shoutout to Grace Snow [@grace-snow]. She pointed out all the mistakes I had made, and in the process this helped me learn more about accessibility.
