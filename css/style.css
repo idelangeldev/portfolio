@@ -57,6 +57,13 @@ body {
 .flex {
   display: flex; }
 
+.column {
+  flex-direction: column;
+  width: fit-content; }
+  @media only screen and (min-width: 23em) {
+    .column {
+      flex-direction: row; } }
+
 .sm-y-padding {
   padding-bottom: 0.1rem !important; }
 
@@ -66,6 +73,13 @@ body {
 
 .d-none {
   display: none; }
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
 
 body {
   color: hsl(0,0%,85%);
@@ -329,9 +343,12 @@ body {
       left: 59.7rem; } }
 
 .hero__img {
-  width: 50.73%;
+  width: 63.73%;
   z-index: 1;
   position: relative; }
+  @media only screen and (min-width: 23em) {
+    .hero__img {
+      width: 50.73%; } }
   @media only screen and (min-width: 42em) {
     .hero__img {
       width: 45.45%;
@@ -454,7 +471,10 @@ body {
 .section-projects {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 4rem; }
+  row-gap: 6rem; }
+  @media only screen and (min-width: 23em) {
+    .section-projects {
+      row-gap: 4rem; } }
   @media only screen and (min-width: 63.5em) {
     .section-projects {
       row-gap: 6.918rem; } }
@@ -467,13 +487,21 @@ body {
 
 .projects__title-box {
   display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (min-width: 23em) {
+    .projects__title-box {
+      flex-direction: row; } }
 
 .projects__boxes {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 4rem; }
+  row-gap: 6rem; }
+  @media only screen and (min-width: 23em) {
+    .projects__boxes {
+      row-gap: 4rem; } }
   @media only screen and (min-width: 42em) {
     .projects__boxes {
       grid-template-columns: 1fr 1fr;
@@ -498,10 +526,9 @@ body {
       flex-direction: column; } }
 
 @media only screen and (min-width: 79.5em) {
-  .projects__pic {
+  .projects__pic-box {
     position: relative; }
-    .projects__pic:hover .projects__overlay,
-    .projects__pic:active .projects__overlay {
+    .projects__pic-box:hover .projects__overlay {
       opacity: 1;
       visibility: visible; } }
 
@@ -535,7 +562,8 @@ body {
   gap: 0.7rem; }
 
 .projects__languages {
-  gap: 1.8rem; }
+  gap: 1.8rem;
+  list-style: none; }
 
 .projects__language {
   font-size: 1.8rem;

@@ -56,8 +56,7 @@ $clr-white-lowop: #{"hsla(0,0%,100%, .5)"};
 }
 
 // RESPONSIVE BREAKPOINTS
-// $bp-iphonese: 23.43em; //374.88px iPhone and above
-// $bp-tab-small: 27.37em; //437.92px bigger phones
+$bp-iphone-se: 23em; //374.88px iPhone and above
 $bp-tab: 42em; // 672px small tablets
 $bp-tabb: 48.5em; // 776px slightly bigger ipads
 $bp-tabbb: 50.5em; // 808px slightly bigger ipads

@@ -92,9 +92,13 @@
   }
 
   &__img {
-    width: 50.73%;
+    width: 63.73%;
     z-index: 1;
     position: relative;
+
+    @media only screen and (min-width: $bp-iphone-se) {
+      width: 50.73%;
+    }
 
     @media only screen and (min-width: $bp-tab) {
       width: 45.45%;
@@ -244,7 +248,11 @@
 .section-projects {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 4rem;
+  row-gap: 6rem;
+
+  @media only screen and (min-width: $bp-iphone-se) {
+    row-gap: 4rem;
+  }
 
   @media only screen and (min-width: $bp-ipad-pro) {
     row-gap: 6.918rem;
@@ -260,14 +268,24 @@
 .projects {
   &__title-box {
     display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (min-width: $bp-iphone-se) {
+      flex-direction: row;
+    }
   }
 
   &__boxes {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 4rem;
+    row-gap: 6rem;
+
+    @media only screen and (min-width: $bp-iphone-se) {
+      row-gap: 4rem;
+    }
 
     @media only screen and (min-width: $bp-tab) {
       grid-template-columns: 1fr 1fr;
@@ -295,16 +313,18 @@
     }
   }
 
-  &__pic {
+  &__pic-box {
     @media only screen and (min-width: $bp-mb-pro) {
       position: relative;
 
-      &:hover .projects__overlay,
-      &:active .projects__overlay {
+      &:hover .projects__overlay {
         opacity: 1;
         visibility: visible;
       }
     }
+  }
+
+  &__pic {
   }
 
   &__overlay {
@@ -343,6 +363,7 @@
 
   &__languages {
     gap: 1.8rem;
+    list-style: none;
   }
 
   &__language {

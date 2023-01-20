@@ -12,6 +12,15 @@
   display: flex;
 }
 
+.column {
+  flex-direction: column;
+  width: fit-content;
+
+  @media only screen and (min-width: $bp-iphone-se) {
+    flex-direction: row;
+  }
+}
+
 .sm-y-padding {
   // padding: 0 1.6rem 0.1rem 2.4rem;
   padding-bottom: 0.1rem !important;
@@ -24,4 +33,12 @@
 
 .d-none {
   display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

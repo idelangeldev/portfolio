@@ -41,6 +41,8 @@ function getFieldName(input) {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
 // EVENT LISTENERS
 
 // Add an event listener to the input field to listen for changes
@@ -58,6 +60,7 @@ nameInput.addEventListener("input", function () {
   }
 });
 
+///////////////////////////////////////////////////////////
 // Add an event listener to the email input
 emailInput.addEventListener("input", function () {
   // Get the email value
@@ -72,6 +75,7 @@ emailInput.addEventListener("input", function () {
   }
 });
 
+///////////////////////////////////////////////////////////
 // Add an event listener to the message area input
 messageInput.addEventListener("input", function () {
   // Get the email value
@@ -91,3 +95,33 @@ messageInput.addEventListener("input", function () {
 
 //   checkRequired([nameInput, emailInput, messageInput]);
 // });
+
+///////////////////////////////////////////////////////////
+// Smooth Scrolling Animation
+
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // Scroll back to the top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    // Scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEL = document.querySelector(href);
+      sectionEL.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Open other links
+    if (!href.startsWith("#")) {
+      window.open(href);
+    }
+  });
+});
